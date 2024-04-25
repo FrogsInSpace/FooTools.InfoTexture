@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -13,48 +13,39 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_INFOTEXTURE DIALOG DISCARDABLE  0, 0, 218, 106
-STYLE WS_CHILD | WS_VISIBLE
+IDD_INFOTEXTURE DIALOG 0, 0, 218, 106
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
 FONT 8, "MS Sans Serif"
 BEGIN
-    COMBOBOX        IDC_COORD_SYS,77,28,111,117,CBS_DROPDOWNLIST |
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COORD_SYS,77,28,111,117,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     RTEXT           "CoordSys:",IDC_COORD_SYS_LABEL,11,31,60,8
-    COMBOBOX        IDC_INFO_TYPE,77,8,111,117,CBS_DROPDOWNLIST | WS_VSCROLL |
-                    WS_TABSTOP
+    COMBOBOX        IDC_INFO_TYPE,77,8,111,117,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     RTEXT           "Info Type:",IDC_STATIC,11,11,60,8
     RTEXT           "UVW Channel:",IDC_UVW_CHANNEL_LABEL,106,60,48,8
-    CONTROL         "",IDC_UVW_CHANNEL_EDIT,"CustEdit",WS_TABSTOP,160,59,19,
-                    10
+    CONTROL         "",IDC_UVW_CHANNEL_EDIT,"CustEdit",WS_TABSTOP,160,59,19,10
     CONTROL         "",IDC_UVW_CHANNEL_SPIN,"SpinnerControl",0x0,180,59,7,10
-    COMBOBOX        IDC_WRAP_MODE,150,86,38,117,CBS_DROPDOWNLIST |
-                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_WRAP_MODE,150,86,38,117,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
     RTEXT           "Channel Wrap Mode:",IDC_WRAP_MODE_LABEL,76,89,69,8
-    CONTROL         "Use Full Camera Normal Range",
-                    IDC_USE_FULL_CAMERA_NORMAL_RANGE,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,77,44,112,9
+    CONTROL         "Use Full Camera Normal Range",IDC_USE_FULL_CAMERA_NORMAL_RANGE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,77,44,112,9
     RTEXT           "Vertex Data Channel:",IDC_DATA_CHANNEL_LABEL,85,72,69,8
-    CONTROL         "",IDC_DATA_CHANNEL_EDIT,"CustEdit",WS_TABSTOP,160,72,19,
-                    10
-    CONTROL         "",IDC_DATA_CHANNEL_SPIN,"SpinnerControl",0x0,180,72,7,
-                    10
+    CONTROL         "",IDC_DATA_CHANNEL_EDIT,"CustEdit",WS_TABSTOP,160,72,19,10
+    CONTROL         "",IDC_DATA_CHANNEL_SPIN,"SpinnerControl",0x0,180,72,7,10
 END
 
-IDD_ABOUT_BFD DIALOG DISCARDABLE  0, 0, 218, 33
-STYLE WS_CHILD | WS_VISIBLE
+IDD_ABOUT_BFD DIALOG 0, 0, 218, 33
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
 FONT 8, "MS Sans Serif"
 BEGIN
     GROUPBOX        "",IDC_STATIC,2,0,214,30
@@ -64,17 +55,16 @@ BEGIN
     LTEXT           "Author ..............",IDC_STATIC,118,8,51,8
 END
 
-IDD_ABOUT_FOO DIALOGEX 0, 0, 218, 41
-STYLE WS_CHILD | WS_VISIBLE
+IDD_ABOUT_FOO DIALOGEX 0, 0, 218, 62
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE
 FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_STATIC,2,0,214,38
     RTEXT           "0000.00.00",IDC_ABOUT_VERSION,171,26,37,8
-    PUSHBUTTON      "www.fooTOOLS.com",IDC_ABOUT_WEB,114,10,96,13,BS_CENTER |
-                    NOT WS_TABSTOP,WS_EX_STATICEDGE
-    LTEXT           "Version ...............",IDC_STATIC,115,26,57,8
-    CONTROL         101,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE |
-                    SS_SUNKEN,14,13,57,17
+    PUSHBUTTON      "www.fooTOOLS.com",IDC_ABOUT_WEB,114,10,96,13,BS_CENTER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "Version .............",IDC_STATIC,115,26,53,8
+    CONTROL         IDB_FOOTOOLS,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | SS_SUNKEN,14,13,57,17
+    CTEXT           "3ds Max 2017+ Builds:\nJosef 'spacefrog' Wienerroither",IDC_STATIC,0,42,216,18
 END
 
 
@@ -84,18 +74,18 @@ END
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE
+2 TEXTINCLUDE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -104,7 +94,6 @@ END
 #endif    // APSTUDIO_INVOKED
 
 
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -127,18 +116,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "TECH: \0"
-            VALUE "CompanyName", "\0"
-            VALUE "FileDescription", "Shade the surface according to various surface properties.\0"
-            VALUE "FileVersion", "3.0.0.0\0"
-            VALUE "InternalName", "InfoTexture\0"
-            VALUE "LegalCopyright", "\0"
-            VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "InfoTexture.dlt\0"
-            VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "3D Studio MAX\0"
-            VALUE "ProductVersion", "3.0.0.0\0"
-            VALUE "SpecialBuild", "\0"
+            VALUE "Comments", "TECH: "
+            VALUE "FileDescription", "Shade the surface according to various surface properties."
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "InfoTexture"
+            VALUE "OriginalFilename", "InfoTexture.dlt"
+            VALUE "ProductName", "3D Studio MAX"
+            VALUE "ProductVersion", "3.0.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -147,15 +131,14 @@ BEGIN
     END
 END
 
-#endif    // !_MAC
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Bitmap
 //
 
-IDB_FOOTOOLS            BITMAP  DISCARDABLE     "fooTOOLS_yellow.bmp"
+IDB_FOOTOOLS            BITMAP                  "res/fooTOOLS_yellow.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -165,23 +148,23 @@ IDB_FOOTOOLS            BITMAP  DISCARDABLE     "fooTOOLS_yellow.bmp"
 IDD_INFOTEXTURE DLGINIT
 BEGIN
     IDC_COORD_SYS, 0x403, 7, 0
-0x6143, 0x656d, 0x6172, "\000"
+0x6143, 0x656d, 0x6172, "\000" 
     IDC_COORD_SYS, 0x403, 6, 0
-0x6f57, 0x6c72, 0x0064,
+0x6f57, 0x6c72, 0x0064, 
     IDC_COORD_SYS, 0x403, 7, 0
-0x624f, 0x656a, 0x7463, "\000"
+0x624f, 0x656a, 0x7463, "\000" 
     IDC_INFO_TYPE, 0x403, 6, 0
-0x7473, 0x6675, 0x0066,
+0x7473, 0x6675, 0x0066, 
     IDC_INFO_TYPE, 0x403, 5, 0
-0x6f67, 0x7365, "\000"
+0x6f67, 0x7365, "\000" 
     IDC_INFO_TYPE, 0x403, 5, 0
-0x6568, 0x6572, "\000"
+0x6568, 0x6572, "\000" 
     IDC_WRAP_MODE, 0x403, 5, 0
-0x6f4e, 0x656e, "\000"
+0x6f4e, 0x656e, "\000" 
     IDC_WRAP_MODE, 0x403, 6, 0
-0x6c43, 0x6d61, 0x0070,
+0x6c43, 0x6d61, 0x0070, 
     IDC_WRAP_MODE, 0x403, 7, 0
-0x6552, 0x6570, 0x7461, "\000"
+0x6552, 0x6570, 0x7461, "\000" 
     0
 END
 
@@ -192,12 +175,17 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_INFOTEXTURE, DIALOG
     BEGIN
         RIGHTMARGIN, 217
         BOTTOMMARGIN, 105
+    END
+
+    IDD_ABOUT_FOO, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 41
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -205,17 +193,34 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUT_FOO AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 100, 100
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
-STRINGTABLE DISCARDABLE
+STRINGTABLE
 BEGIN
     IDS_LIBDESCRIPTION      "Shade the surface according to various surface properties."
     IDS_CLASS_NAME          "InfoTexture"
     IDS_INFOTEXTURE         "InfoTexture"
     IDS_CATEGORY_BFD        "BFDtools"
     IDS_CATEGORY_FOO        "fooTOOLS"
-    IDS_VERSION             "2007.02.20"
+    IDS_VERSION             "2025.02.01"
     IDS_PARAMS              "Parameters"
     IDS_INFO_TYPE           "Info Type"
     IDS_COORD_SYS           "CoordSys"
@@ -227,7 +232,7 @@ BEGIN
     IDS_INFO_UVW_COORDS     "UVW Coordinates"
 END
 
-STRINGTABLE DISCARDABLE
+STRINGTABLE
 BEGIN
     IDS_INFO_REFLECT_VECTOR "Reflect Vector"
     IDS_INFO_REFRACT_VECTOR "Refract Vector"
@@ -244,7 +249,7 @@ BEGIN
     IDS_NO_DESC             "No description available"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

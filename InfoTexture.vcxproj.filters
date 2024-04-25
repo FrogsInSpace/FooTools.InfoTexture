@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src/DllEntry.cpp" />
+    <ClCompile Include="src/InfoTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src/AboutRollup.h" />
+    <ClInclude Include="src/InfoTexture.h" />
+    <ClInclude Include="src/resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src/res/fooTOOLS_yellow.bmp">
+      <Filter>res</Filter>
+    </None>
+    <None Include="src/InfoTexture.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src/InfoTexture.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{94e37e45-d45f-4c14-925d-632ac74db07d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

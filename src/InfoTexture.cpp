@@ -22,6 +22,11 @@ public:
 	int 			IsPublic()					{ return 1; }
 	void*			Create(BOOL loading=FALSE);
 	const TCHAR*	ClassName()					{ return GetString(IDS_CLASS_NAME); }
+
+#if MAX_VERSION_MAJOR >= 24
+	const TCHAR* NonLocalizedClassName() { return ClassName(); }
+#endif
+
 	SClass_ID		SuperClassID()				{ return TEXMAP_CLASS_ID; }
 	Class_ID		ClassID()					{ return kInfoTexture_ClassID; }
 	const TCHAR* 	Category()					{ return TEXMAP_CAT_3D; }
@@ -126,6 +131,11 @@ class InfoTextureDlgProc : public ParamMap2UserDlgProc
 static InfoTextureDlgProc infoTextureDlgProc;
 
 //=================================================================================================
+
+
+#if MAX_VERSION_MAJOR >= 15
+#define end p_end
+#endif
 
 static ParamBlockDesc2 infoTexturePBlockDesc
 (
@@ -248,11 +258,6 @@ InfoTexture::InfoTexture() :
 
 // Animatable =====================================================================================
 
-void InfoTexture::GetClassName(TSTR& s)
-{
-	s = GetString(IDS_CLASS_NAME);
-}
-
 Class_ID InfoTexture::ClassID()
 {
 	return kInfoTexture_ClassID;
@@ -281,8 +286,11 @@ Animatable* InfoTexture::SubAnim(int i)
 		default:				return NULL;
 	}
 }
-
+#if MAX_RELEASE_R24
+TSTR InfoTexture::SubAnimName(int i, BOOL isLocalized)
+#else
 TSTR InfoTexture::SubAnimName(int i)
+#endif
 {
 	switch (i)
 	{
@@ -358,7 +366,13 @@ void InfoTexture::SetReference(int i, RefTargetHandle refTarg)
 	}
 }
 
-RefResult InfoTexture::NotifyRefChanged(Interval changeInt, RefTargetHandle hTarget, PartID& partID, RefMessage message)
+#if MAX_VERSION_MAJOR < 17 //Max 2015
+RefResult InfoTexture::NotifyRefChanged(Interval changeInt, RefTargetHandle hTarget,
+	PartID& partID, RefMessage message)
+#else
+RefResult InfoTexture::NotifyRefChanged(const Interval& changeInt, RefTargetHandle hTarget,
+	PartID& partID, RefMessage message, BOOL propagate)
+#endif
 {
 	switch (message)
 	{
